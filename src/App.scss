@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.App {
+  border: 10px solid rgb(25, 25, 25);
+  border-radius: 50px;
+  background: white;
+  position: relative;
+  width: 300px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 150px;
+    height: 20px;
+    background: rgb(25, 25, 25);
+    border-radius: 0 0 25px 25px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 5px;
+    background: rgb(25, 25, 25);
+    border-radius: 5px;
+  }
+}
+
+.result {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  padding: 8px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  top: 4px;
+  left: 26px;
+}
+
+.main {
+  font-size: 54px;
+
+  &.small {
+    font-size: 36px;
+  }
+}
+
+.secondary {
+  color: rgba(0, 0, 0, 0.25);
+
+  &.small {
+    font-size: 18px;
+  }
+}
+
+.buttons {
+  margin: 8px 8px 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  grid-auto-rows: minmax(60px, auto);
+  display: grid;
+}
+
+button {
+  padding: 0;
+  font-size: inherit;
+  font-weight: 500;
+  display: block;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.num {
+  background: rgba(0, 0, 0, 0.05);
+
+  &:hover,
+  &:focus {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.operation {
+  background: rgba(0, 200, 255, 0.25);
+
+  &:hover,
+  &:focus {
+    background: rgba(0, 200, 255, 0.4);
+  }
+}
+
+.dif-op {
+  background: rgba(200, 255, 0, 0.25);
+
+  &:hover,
+  &:focus {
+    background: rgba(200, 255, 0, 0.4);
+  }
+}
+
+.doubled-right {
+  // grid-column-start: 1;
+  // grid-column-end: 3;
+  //* Нижняя строка равна двум верхним
+  grid-column: 1/3;
+}
+
+// .doubled-down {
+//   grid-column-start: 4;
+//   grid-row-start: 5;
+//   grid-row-end: 7;
+// }

@@ -81,7 +81,6 @@ body {
 }
 
 .buttons {
-  color: rgb(25, 25, 25);
   margin: 8px 8px 30px;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 8px;
@@ -90,6 +89,7 @@ body {
 }
 
 button {
+  color: rgb(25, 25, 25);
   padding: 0;
   font-size: inherit;
   font-weight: 500;
